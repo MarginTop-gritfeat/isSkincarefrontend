@@ -1,0 +1,169 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+
+@media only screen and (max-width: 400px){
+    .doctorlandingtopp{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/doctorimage.jpeg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 55vh;
+        overflow: hidden;
+        
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+        font-family: Montserrat;
+
+       
+    }
+
+
+
+
+
+.doctorlandingtopp h1{
+    font-size: 38px;
+    font-weight: 600;
+    padding-top: 40px;
+    letter-spacing: 0.03em;
+}
+.doctorlandingtopp p{
+    font-size: 14px;
+    font-weight: 400;
+    padding:10px 0;
+    letter-spacing: 0.04em;
+    line-height: 20px;
+}
+.doctorlandingtopp .servicessearchh{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.doctorlandingtopp .servicessearchh input{
+    font-family: Montserrat;
+    padding:10px 40px;
+    border-radius: 5px;
+    border:none;
+
+}
+.doctorlandingtopp .servicessearchh .searchlogo{
+    padding:9px;
+    background-color: white;
+    color:#FC724D;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doctorlandingtopp .servicessearchh input::placeholder{
+letter-spacing: 0.03em;
+color:rgb(158, 148, 148);
+font-family: Montserrat;
+color:#FC724D;
+
+}
+.doctorcontent{
+    padding:15px;
+    text-align: left;
+}
+
+.doctorcontent h1{
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    color:#FC724D;
+    text-align: left;
+}
+.diseasecontainer{
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.diseasecontainer .doctorcard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+.diseasecontainer .doctorcard .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding:10px;
+    color:#FC724D
+
+}
+
+.diseasecontainer .doctorcard .doctorname{
+    padding:10px;
+    color:#FC724D;
+
+
+
+}
+
+.diseasecontainer .doctorcard .doctorname h1{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+
+}
+/* .diseasecontainer .doctorcard .doctorname h2{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    
+} */
+.diseasecontainer .doctorcard .image{
+    height: 30px;
+    width: 30px;
+}
+.diseasecontainer .doctorcard .doctorname {
+    text-align: left;
+    /* border: 1px solid rebeccapurple; */
+
+}
+
+.diseasecontainer .doctorcard .harvestbutton{
+    text-decoration: none;
+    background-color: #FC724D;
+    color:white;
+    padding:10px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+}
