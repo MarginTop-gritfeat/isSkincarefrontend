@@ -3,10 +3,11 @@ import './App.css';
 import Intro from './components/intro/intro';
 import Landing from './components/landing/landing';
 import Skindisease from './components/skindisease/skindisease';
-
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Skinmonitoring from './components/skinmonitoring/skinmonitoring';
 import Skinopedia from './components/skinopedia/skinopedia';
+import ReportDoc from './components/ReportDoctor/reportdoc';
+
 
 
 function App() {
@@ -19,11 +20,13 @@ function App() {
           <Route exact path='/skindisease' element={<Skindisease/>}/>
           <Route exact path='/skinmonitoring' element={<Skinmonitoring/>}/>
           <Route exact path='/skinopedia' element={<Skinopedia/>}/>
+          <Route exact path='/reportDoc' element={<ReportDoc/>}/>
+
         </Routes>
       </div>
     </Router>
-   
-  );
+  
+  )
 }
-
+   
 export default App;

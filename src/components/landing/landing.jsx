@@ -44,19 +44,24 @@ const Landing = () =>{
                             <h4>Skin Disease Detection</h4>
                         </div>
                     </a>
-                    
-                    <div className='servicescard'>
-                        <img src="../images/doctor.png"/>
-                        <h4>Skin Detection</h4>
-                    </div>
-                    <div className='servicescard'>
-                        <img src="../images/doctor.png"/>
-                        <h4>Skin Detection</h4>
-                    </div>
-                    <div className='servicescard'>
-                        <img src="../images/doctor.png"/>
-                        <h4>Skin Detection</h4>
-                    </div>
+                    <a href="skinmonitoring">
+                        <div className='servicescard'>
+                            <img src="../images/doctor.png"/>
+                            <h4>Skin Monitoring</h4>
+                        </div>
+                    </a>
+                    <a href="/skinopedia">
+                        <div className='servicescard'>
+                            <img src="../images/doctor.png"/>
+                            <h4>Skinopedia</h4>
+                        </div>
+                    </a>
+                    <a href="/reportDoc">
+                        <div className='servicescard'>
+                            <img src="../images/doctor.png"/>
+                            <h4>Set Appointment</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
             <Nav/>
