@@ -1,0 +1,359 @@
+
+*{
+    padding:0;
+    margin:0;
+}
+
+@media only screen and (max-width: 400px){
+    .diseaselandingtop{
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(44, 38, 38, 0.5)
+          ),
+          url("../../images/introbg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: fixed;
+        min-height: 55vh;
+        overflow: hidden;
+        text-align: left;
+        color:white;
+        padding:50px 30px;
+        background-color: #F0F0F0;
+        font-family: Montserrat;
+
+       
+    }
+
+
+
+
+
+.diseaselandingtop h1{
+    font-size: 38px;
+    font-weight: 600;
+    padding-top: 40px;
+    letter-spacing: 0.03em;
+}
+.diseaselandingtop p{
+    font-size: 14px;
+    font-weight: 400;
+    padding:10px 0;
+    letter-spacing: 0.04em;
+    line-height: 20px;
+}
+.diseaselandingtop .servicesearch{
+    display: flex;
+    flex-direction: row ;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.diseaselandingtop .servicesearch input{
+    font-family: Montserrat;
+    padding:10px 40px;
+    border-radius: 5px;
+    border:none;
+    background-color: #819347;
+
+}
+.diseaselandingtop .servicesearch .searchlogo{
+    padding:9px;
+    background-color: #FC724D;
+    color:white;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.diseaselandingtop .servicesearch input::placeholder{
+letter-spacing: 0.03em;
+color:rgb(158, 148, 148);
+font-family: Montserrat;
+color:white;
+
+}
+
+.diseasecontent{
+    padding:15px;
+    text-align: left;
+}
+
+.diseasecontent h1{
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
+    color:#819347;
+    text-align: left;
+}
+.diseasecontainer{
+    
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.diseasecontainer .diseasecard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    background-color: white;
+    border-radius: 10px;
+}
+.diseasecontainer .diseasecard .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    padding:10px;
+    color:#819347
+
+}
+
+.diseasecontainer .diseasecard .cropname{
+    padding:10px;
+    color:#819347;
+
+
+
+}
+
+.diseasecontainer .diseasecard .cropname h1{
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+
+}
+/* .diseasecontainer .diseasecard .cropname h2{
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    
+} */
+
+
+.diseasecontainer .diseasecard .harvestbutton{
+    text-decoration: none;
+    background-color: #819347;
+    color:white;
+    padding:10px;
+    width:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 10px 10px 0px;
+
+
+}
+
+
+.modal{
+    position: fixed;
+    top:0;
+    left:0;
+    height:100%;
+    background-color: #F0F0F0;
+    overflow-y: scroll;
+
+
+
+}
+
+.modal .camera{
+    border:3px solid yellow;
+    height:100vh;
+}
+
+
+.modal h2{
+    text-align: left;
+    font-weight: 600;
+    font-size: 22px;
+    color:#F0F0F0;
+    padding:10px;
+    background-color: #819347;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.capturebuttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    padding-top: 10%;
+    }
+
+.modalcontainer button{
+    padding:10px 20px;
+    border:none;
+    background-color: #819347;
+    color:white;
+    font-family: Montserrat;
+    letter-spacing: 0.03em;
+    font-size: 15px;
+
+}
+
+.modalcontainer .inputform{
+    display: flex;
+    flex-direction: column;
+    padding:20px 40px;
+
+}
+
+.modalcontainer .input_field{
+    /* padding:5px 10px;
+    border:1px solid rgb(129, 147, 71, 0.3);
+    border-radius: 5px;
+    margin:5px 0;
+    color:#819347;
+    padding:5px 10px; */
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+.modalcontainer .input_field h3{
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    color:#819347;
+    margin-right: 15px;
+}
+.modalcontainer .input_field input{
+    border:none;
+    background-color:#819347;
+    padding:5px 10px;
+    border-radius: 5px;
+}
+.modalcontainer .input_field select{
+    padding:5px 10px;
+    width:180px;
+    background-color:#819347;
+    color:white;
+}
+
+.modalcontainer .submit{
+    text-align: center;
+    padding-top: 10px;
+}
+
+.reportmodal{
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    
+
+}
+
+.reportmodal .title img{
+    height:10vh;
+
+}
+.reportmodalcontent{
+    border-radius: 20px;
+    background-color: white;
+    border-radius: 15px;
+    padding-bottom: 100px;
+    max-height:65vh ;
+    overflow-y: scroll;
+
+    
+
+
+
+}
+
+.reportmodalcontent .title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding:20px 0px;
+    background-color: #819347;
+    border-bottom-left-radius: 50%;
+
+
+}
+.reportmodalcontent .title h1{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    width:50%;
+    text-align: left;
+    padding-top: 20px;
+    color:white;
+    padding-left: 10px;
+}
+.reportcontent{
+    color:#819347;
+    text-align: left;
+    padding:20px 40px;
+    font-family: Montserrat;
+    letter-spacing: 0.03em;
+    
+    
+}
+.reportcontent .name{
+    font-size: 16px;
+}
+.reportcontent .name span{
+    font-weight: 600;
+
+}
+.reportcontent .information{
+    padding-top: 10px;
+    line-height: 20px;
+}
+.reportcontent .symptoms{
+    padding-top: 10px;
+}
+.reportcontent h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.reportcontent .symptoms ul{
+    text-decoration: none;
+    list-style:decimal;
+    line-height: 20px;
+   
+
+}
+
+.reportmodal .cross{
+    position:fixed;
+    color:white;
+    top:90px;
+    font-size: 20px;
+    right:40px
+}
+
+
+
+
+
+
+}

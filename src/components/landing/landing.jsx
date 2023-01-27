@@ -2,6 +2,10 @@ import React from 'react';
 import {FaUser} from 'react-icons/fa'
 import {IoMdSettings} from 'react-icons/io'
 import {FaHospital} from 'react-icons/fa'
+import './landing.css'
+import Nav from '../nav/nav';
+import Footer from '../footer/footer';
+
 
 
 
@@ -29,6 +33,34 @@ const Landing = () =>{
             <div className="bottom">
 
             </div>
+            <div className='bottom'>
+                <div className='services'>
+                    <h2>What we Offer</h2>
+                </div>
+                <div className='servicescontainer'>
+                    <a href="/skindisease">
+                        <div className='servicescard'>
+                            <img src="../images/doctor.png"/>
+                            <h4>Skin Disease Detection</h4>
+                        </div>
+                    </a>
+                    
+                    <div className='servicescard'>
+                        <img src="../images/doctor.png"/>
+                        <h4>Skin Detection</h4>
+                    </div>
+                    <div className='servicescard'>
+                        <img src="../images/doctor.png"/>
+                        <h4>Skin Detection</h4>
+                    </div>
+                    <div className='servicescard'>
+                        <img src="../images/doctor.png"/>
+                        <h4>Skin Detection</h4>
+                    </div>
+                </div>
+            </div>
+            <Nav/>
+            <Footer/>
         </div>
     )
 }

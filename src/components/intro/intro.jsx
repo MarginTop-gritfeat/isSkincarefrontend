@@ -25,10 +25,12 @@ const Intro = () =>{
             </div>
             <div className='bottom'>
                 <p>Use proven method about the disease and use recommended remedies with us.</p>
-                <div className='introarrow'>
-                    <AiOutlineArrowRight/>
-                </div>
-
+                <a href="/landing">
+                    <div className='introarrow'>
+                        <AiOutlineArrowRight/>
+                    </div>
+                </a>
+               
             </div>
 
         </div>
