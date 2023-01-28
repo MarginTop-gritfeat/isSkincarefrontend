@@ -21,8 +21,8 @@ const WebcamComponent = () => <Webcam />
 const videoConstraints = {
     width: 400,
     height: 400,
-    // facingMode: { exact: "environment" }
-    facingMode: "user"
+    facingMode: { exact: "environment" }
+    // facingMode: "user"
 
 }
 let file_link = ''
@@ -105,7 +105,7 @@ const Disease = () =>{
             console.log(formData)
 
             setLoading(true)
-            const url = "https://192.168.2.201:8000/predictdisease"
+            const url = "https://100.64.131.175:8000/predictdisease"
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -125,7 +125,7 @@ const Disease = () =>{
                 short_name:x.short_name,
                 symptoms:x.symptoms,
             })
-            file_link = 'https://192.168.2.201:8000/ + ${report.report}'
+            
             setLoading(false)
             // console.log(x.description.name)
             // console.log(x.description.Information)
@@ -133,6 +133,7 @@ const Disease = () =>{
             
          
         }}
+        file_link = 'https://100.64.131.175:8000/' + report.report
 
 
     // const plants = [
@@ -161,6 +162,7 @@ const Disease = () =>{
     const closeandreload=()=>{
         window.location.reload(true)
     }
+    console.log(file_link)
 
     return(
         <div className='disease'>
@@ -230,7 +232,7 @@ const Disease = () =>{
                     </div>
                     <div className='inputform'>
                         <div className='input_field'>
-                            <h3>Age</h3><input name="age" value={inputdata.age} onChange={handleinputchange} className="ageinput"></input>
+                            <h3>Age</h3><input name="age" value={inputdata.age} onChange={handleinputchange} className="ageinput" style={{color:'white', backgroundColor:'#819347'}}></input>
                             
                         </div>
                         <div className='input_field'>
@@ -313,6 +315,7 @@ const Disease = () =>{
             </div>
         </div>
         </div>
+        <Footer/>
     </div>
     ):(
         <div className="loader"><ClockLoader color={'black'} loading={loading} size={40} /></div>

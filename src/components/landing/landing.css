@@ -95,6 +95,7 @@
         padding:4px;
         width:80px;
         margin:5px;
+        margin-bottom: 15px;
         box-shadow: 2px 2px 5px 2px rgb(56, 63, 89, 0.3);
     }
     .landing .bottom .servicescard h4{

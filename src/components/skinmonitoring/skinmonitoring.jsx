@@ -24,8 +24,8 @@ const WebcamComponent = () => <Webcam />
 const videoConstraints = {
     width: 400,
     height: 400,
-    // facingMode: { exact: "environment" }
-    facingMode: "user"
+    facingMode: { exact: "environment" }
+    // facingMode: "user"
 
 }
 
@@ -58,7 +58,7 @@ const Skinmonitoring = () =>{
 
     useEffect(() => {
 
-        fetch('https://192.168.43.243:8000/monitor')
+        fetch('https://100.64.131.175:8000/monitor')
         .then((response) => response.json())
         .then((data)=>{
             setfulldata(data)
@@ -116,7 +116,7 @@ const Skinmonitoring = () =>{
             console.log(formData)
 
             setLoading(true)
-            const url = "https://192.168.43.243:8000/monitor"
+            const url = "https://100.64.131.175:8000/monitor"
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -323,6 +323,8 @@ const Skinmonitoring = () =>{
             </div> */}
         </div>
         </div>
+        <Footer/>
+        <Footer/>
     </div>
     ):(
         <div className="loader"><ClockLoader color={'black'} loading={loading} size={40} /></div>
@@ -332,6 +334,7 @@ const Skinmonitoring = () =>{
 
         <Nav/>
         <Footer/>
+        
         </div>
         
     )
