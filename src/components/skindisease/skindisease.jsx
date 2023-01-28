@@ -25,6 +25,7 @@ const videoConstraints = {
     facingMode: "user"
 
 }
+let file_link = ''
 
 
 const Disease = () =>{
@@ -42,11 +43,13 @@ const Disease = () =>{
     })
     const [reportmodal, setreportmodal] = useState(false)
     const [report, setreport] = useState({
-        crop:'',
-        disease_name:'',
-        information:'',
-        symptoms:'',
-        treatment:''
+        name:'',
+        description:'',
+        prevention:'',
+        report:'',
+        causes:[],
+        short_name:'',
+        symptoms:[],
     })
 
     const [picture, setPicture] = useState('')
@@ -63,6 +66,18 @@ const Disease = () =>{
             [name]: value
         })
     }
+
+    // const Downloadlink = () =>{
+    //     let file_link = 'https://192.168.2.201:8000/' + report.report
+    //     let blob = file_link.blob()
+    //     console.log(file_link)
+    //     console.log(blob)
+    //     const fileURL = window.URL.createObjectURL(blob)
+    //     let alink = document.createElement('a')
+    //     alink.href = fileURL
+    //     alink.download = 'file_link'
+    //     alink.click();
+    // }
 
 
     const handlesubmit = async e => {
@@ -90,7 +105,7 @@ const Disease = () =>{
             console.log(formData)
 
             setLoading(true)
-            const url = "https://100.64.131.174:8000/predictdisease"
+            const url = "https://192.168.2.201:8000/predictdisease"
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -101,6 +116,16 @@ const Disease = () =>{
             }
             );
             const x = await response.json()
+            setreport({
+                name:x.name,
+                description:x.description,
+                prevention:x.prevention,
+                report:x.report,
+                causes:x.causes,
+                short_name:x.short_name,
+                symptoms:x.symptoms,
+            })
+            file_link = 'https://192.168.2.201:8000/ + ${report.report}'
             setLoading(false)
             // console.log(x.description.name)
             // console.log(x.description.Information)
@@ -145,7 +170,7 @@ const Disease = () =>{
                     Take a snap and submit your details
                 </p>
                 <div className='servicesearch'>
-                    <input placeholder='Take a picture' value=""></input>
+                    <input placeholder='Take a picture'></input>
                     <div className='searchlogo' onClick={()=>setmodal({status:true})}>
                         <AiFillCamera/>
                     </div>
@@ -205,7 +230,7 @@ const Disease = () =>{
                     </div>
                     <div className='inputform'>
                         <div className='input_field'>
-                            <h3>Age</h3><input name="age" value={inputdata.age} onChange={handleinputchange}/>
+                            <h3>Age</h3><input name="age" value={inputdata.age} onChange={handleinputchange} className="ageinput"></input>
                             
                         </div>
                         <div className='input_field'>
@@ -257,27 +282,34 @@ const Disease = () =>{
             <img src="../images/doctor.png"/><h1>Disease report on your skin</h1>
         </div>
         <div className='reportcontent'>
-            <div className='name'>Disease: <span>{report.disease_name}</span></div>
-            <p className='information'>{report.information}</p>
+            <div className='name'>Disease: <span>{report.short_name}</span></div>
+            <div className='name'>Full Name: <span>{report.name}</span></div>
+            <p className='information'>{report.description}</p>
             <div className='symptoms'>
-                {/* <h2>Symptoms</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                    <li>Lorem ipsum dolor sit</li>
-                </ul> */}
+                <h2>Symptoms</h2>
+                {report.symptoms.map((symptom, key)=>(<li>{symptom}</li>))}
             </div>
             <div className='symptoms'>
-                <h2>Treatment</h2>
+                <h2>Causes</h2>
+                {report.causes.map((causes, key)=>(<li>{causes}</li>))}
+            </div>
+            <div className='symptoms'>
+                <h2>Prevention</h2>
                 <ul>
                     
-                        {report.treatment}
+                        {report.prevention}
                     
                     <br/>
                 </ul>
                 
 
+            </div>
+            <div className='symptoms'>
+                {/* <h2 className='generatereport' download>Generate Report</h2> */}
+                {/* <a href="https://192.168.2.201:8000/pdf/859392033839943093.pdf" style={{textDecoration:'none'}} target="_blank" className='generatereport'>Generate Report</a> */}
+                <a href={file_link} style={{textDecoration:'none'}} target="_blank" className='generatereport'>Generate Report</a>
+
+                
             </div>
         </div>
         </div>

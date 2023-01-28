@@ -238,7 +238,9 @@ color:white;
     background-color:#819347;
     padding:5px 10px;
     border-radius: 5px;
+    color:white;
 }
+
 .modalcontainer .input_field select{
     padding:5px 10px;
     width:180px;
@@ -350,7 +352,24 @@ color:white;
     font-size: 20px;
     right:40px
 }
+.ageinput{
+    border:none;
+    padding:5px 10px;
+    border-radius: 5px;
+    color:white;
+    border:1px solid black;
 
+}
+.generatereport{
+    background-color: #819347;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:10px 30px;
+    letter-spacing: 0.03em;
+    border-radius: 10px;
+}
 
 
 

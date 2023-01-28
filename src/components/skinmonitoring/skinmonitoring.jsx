@@ -2,7 +2,7 @@ import './skinmonitoring.css'
 import { FaSearch } from 'react-icons/fa';
 import {MdDoubleArrow} from 'react-icons/md'
 import {GiPlantRoots} from 'react-icons/gi'
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {AiFillCamera} from 'react-icons/ai'
 import {FaUserCircle} from 'react-icons/fa'
 import {CiApple} from 'react-icons/ci'
@@ -52,6 +52,31 @@ const Skinmonitoring = () =>{
         treatment:''
     })
 
+    const [fulldata, setfulldata] = useState([])
+
+
+
+    useEffect(() => {
+
+        fetch('https://192.168.43.243:8000/monitor')
+        .then((response) => response.json())
+        .then((data)=>{
+            setfulldata(data)
+        }
+
+        )
+    
+      }, []);
+      console.log(fulldata)
+
+
+
+
+
+
+
+
+
     const [picture, setPicture] = useState('')
     const webcamRef = React.useRef(null)
     const capture = React.useCallback(() => {
@@ -91,7 +116,7 @@ const Skinmonitoring = () =>{
             console.log(formData)
 
             setLoading(true)
-            const url = "https://100.64.131.174:8000/monitor"
+            const url = "https://192.168.43.243:8000/monitor"
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
@@ -146,7 +171,7 @@ const Skinmonitoring = () =>{
                     Generate today's report for your healing process.
                 </p>
                 <div className='servicesearch'>
-                    <input placeholder='Take a picture' value=""></input>
+                    <input placeholder='Take a picture' ></input>
                     <div className='searchlogo' onClick={()=>setmodal({status:true})}>
                         <AiFillCamera/>
                     </div>
@@ -155,40 +180,51 @@ const Skinmonitoring = () =>{
             <div className='diseasecontent'>
                 <h1>Track your healing process</h1>
                 <div className='diseasecontainer'>
+
+
+                    {
+                        fulldata.map((fulldata, key)=>(
+                            <div className='diseasecard'>
+                                <div className='image' style={{fontSize:'30px'}}>
+                                    <FaUserCircle/>
+                                </div>
+                                <div className='cropname'>
+                                <h1>{new Date(fulldata[3] * 1000).toDateString()}</h1>
+
+
+
+                                    {/* <h1>{fulldata[3]}</h1> */}
+                                </div>
+                                <div className='harvestbutton' onClick={()=>setreportmodal(true)}>
+                                    <MdDoubleArrow/>
+                                </div>   
+                            </div>
+
+                        ))
+                    }
+
+
+
+
+
+
+
+
+
                     
-                            <div className='diseasecard'>
+                            {/* <div className='diseasecard'>
                                 <div className='image' style={{fontSize:'30px'}}>
                                     <FaUserCircle/>
                                 </div>
                                 <div className='cropname'>
-                                    <h1>Aug 01, 2022</h1>
+                                    <h1>{fulldata[0][3]}</h1>
                                 </div>
-                                <div className='harvestbutton' onClick={()=>setmodal({status:true})}>
+                                <div className='harvestbutton' onClick={()=>setreportmodal(true)}>
                                     <MdDoubleArrow/>
                                 </div>   
-                            </div>
-                            <div className='diseasecard'>
-                                <div className='image' style={{fontSize:'30px'}}>
-                                    <FaUserCircle/>
-                                </div>
-                                <div className='cropname'>
-                                    <h1>Aug 04, 2022</h1>
-                                </div>
-                                <div className='harvestbutton' onClick={()=>setmodal({status:true})}>
-                                    <MdDoubleArrow/>
-                                </div>   
-                            </div>
-                            <div className='diseasecard'>
-                                <div className='image' style={{fontSize:'30px'}}>
-                                    <FaUserCircle/>
-                                </div>
-                                <div className='cropname'>
-                                    <h1>Aug 06, 2022</h1>
-                                </div>
-                                <div className='harvestbutton' onClick={()=>setmodal({status:true})}>
-                                    <MdDoubleArrow/>
-                                </div>   
-                            </div>
+                            </div> */}
+                            
+                           
                     </div>
                     </div>
             {/* <div className='diseasecontent'>
@@ -260,11 +296,11 @@ const Skinmonitoring = () =>{
         <div className='cross'><ImCross onClick={()=>closeandreload()}/></div>
         <div className='reportmodalcontent'>
         <div className='title'>
-            <img src="../images/doctor.png"/><h1>Disease report on your skin</h1>
+            <img src="../images/doctor.png"/><h1>Compare your skin condition</h1>
         </div>
         <div className='reportcontent'>
-            <div className='name'>Disease: <span>{report.disease_name}</span></div>
-            <p className='information'>{report.information}</p>
+            <div className='name'>Correlation: <span>{fulldata[0][2].toFixed(3)} to healthy skin</span></div>
+            {/* <p className='information'>{report.information}</p> */}
             <div className='symptoms'>
                 {/* <h2>Symptoms</h2>
                 <ul>
@@ -274,7 +310,7 @@ const Skinmonitoring = () =>{
                     <li>Lorem ipsum dolor sit</li>
                 </ul> */}
             </div>
-            <div className='symptoms'>
+            {/* <div className='symptoms'>
                 <h2>Treatment</h2>
                 <ul>
                     
@@ -284,7 +320,7 @@ const Skinmonitoring = () =>{
                 </ul>
                 
 
-            </div>
+            </div> */}
         </div>
         </div>
     </div>

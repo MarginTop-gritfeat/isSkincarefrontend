@@ -7,6 +7,8 @@ import { MdDoubleArrow } from 'react-icons/md';
 import Diseasedata from './diseasedata'
 
 import './skinopedia.css'
+import Nav from '../nav/nav';
+import Footer from '../footer/footer';
 
 const Skinopedia = () =>{
 
@@ -112,6 +114,8 @@ const Skinopedia = () =>{
                                 
 
                         }
+                        <Nav/>
+                        <Footer/>
                     </div>
                 )
 }

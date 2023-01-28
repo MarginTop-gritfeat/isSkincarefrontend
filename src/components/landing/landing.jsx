@@ -55,6 +55,12 @@ const Landing = () =>{
                             <h4>Set Appointment</h4>
                         </div>
                     </a>
+                    <a href="/forum">
+                        <div className='servicescard'>
+                            <img src="../images/doctor.png"/>
+                            <h4>SkinoForum</h4>
+                        </div>
+                    </a>
                 </div>
             </div>
             <Nav/>
