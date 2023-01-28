@@ -17,8 +17,8 @@ const Forum = () =>{
     const initialmessages = [{
         name:'Anonymous202',
         datetime:'7th Jan, 2022 - 10:30pm',
-        subject:'Web Development',
-        message:'To prepare for our launch, we’re looking for an experienced marketing co-founder (CMO) to define, plan and execute our marketing strategy for our India wide launch later this year. Over the next 12 months, our aim is to successfully launch across the India, leading to a Seed and Series A and funding for international expansion',
+        
+        message:'Last month, I got small pimples in my face and it starts getting worse every new day. For the first few week, i did not cared much but after a week when it starts getting worse, i decided to visit a doctor. It was not just simple pimple, it was a symptom of cancer which if not treated in the early stage, could lead to deadly condition. So, it is always better to visit a doctor.',
     },
     {
         name:'Anonymous205',
@@ -97,7 +97,7 @@ const Forum = () =>{
                         </div>
                     </div>
                     
-                    <div className='a2'><span>Subject:&nbsp;</span><h3>{data.subject}</h3></div>
+                    {/* <div className='a2'><span>Subject:&nbsp;</span><h3>{data.subject}</h3></div> */}
                     <div className='a3'><h4>{data.message}</h4></div>
                 </div>
 
