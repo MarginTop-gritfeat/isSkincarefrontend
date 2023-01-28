@@ -81,7 +81,7 @@ color:#FC724D;
 }
 
 .doctorcontent h1{
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0.03em;
     font-weight: 600;
     color:#FC724D;
@@ -107,7 +107,7 @@ color:#FC724D;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 25px;
     padding:10px;
     color:#FC724D
 
@@ -122,8 +122,14 @@ color:#FC724D;
 }
 
 .diseasecontainer .doctorcard .doctorname h1{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 16px;
+    letter-spacing: 0.03em;
+
+}
+.diseasecontainer .doctorcard .doctorname p{
+    font-weight: 500;
+    font-size: 12px;
     letter-spacing: 0.03em;
 
 }

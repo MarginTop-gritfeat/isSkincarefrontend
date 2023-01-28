@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Skinmonitoring from './components/skinmonitoring/skinmonitoring';
 import Skinopedia from './components/skinopedia/skinopedia';
 import ReportDoc from './components/ReportDoctor/reportdoc';
+import Forum from './components/forum/forum';
 
 
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path='/skinmonitoring' element={<Skinmonitoring/>}/>
           <Route exact path='/skinopedia' element={<Skinopedia/>}/>
           <Route exact path='/reportDoc' element={<ReportDoc/>}/>
+          <Route exact path='/forum' element={<Forum/>}/>
 
         </Routes>
       </div>

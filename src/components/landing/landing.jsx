@@ -7,13 +7,6 @@ import Nav from '../nav/nav';
 import Footer from '../footer/footer';
 
 
-
-
-
-
-
-
-
 const Landing = () =>{
     return(
         <div className='landing'>

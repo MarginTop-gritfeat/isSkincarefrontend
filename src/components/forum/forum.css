@@ -1,0 +1,180 @@
+@media only screen and (max-width: 400px){
+
+.forumlanding{
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.7),
+        rgba(44, 38, 38, 0.5)
+      ),
+      url("../../images/introbg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    height: 55vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color:white;
+    padding:20px;
+}
+
+.forumlanding h1{
+    padding-top: 60px;
+    letter-spacing: 0.02em;
+
+}
+.forumlanding p{
+    text-align: center;
+    padding-top: 10px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+}
+
+.forumlanding .servicesearch .button{
+    background-color:#FC724D;
+    padding:10px 40px;
+    border-radius: 8px;
+    margin-top: 30px;
+    letter-spacing: 0.03em;
+
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-bottom: 100px;
+
+}
+
+.messages .content{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between; */
+    font-family: Montserrat;
+    padding:10px 20px;
+    width:90%;
+}
+
+
+.messagecard{
+    border-bottom: 1px solid rgb(177, 173, 173);
+    margin-bottom:30px;
+    padding:10px;
+}
+
+.messages .content .messagecard .a1 .intro{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+
+}
+
+.messages .content .messagecard .name{
+    margin-left: 10px;
+
+
+}
+
+.messages .content .messagecard h1{
+    font-size:14px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: black;
+    
+}
+
+.messages .messagecard img{
+    height:35px;
+    width:35px;
+    border-radius: 90px;
+}
+
+
+.messages .content .messagecard h2{
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color:rgb(141, 139, 137)
+}
+
+.messages .content .messagecard .a1 .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.messages .content .messagecard .a2{
+    padding:10px 0;
+    display: flex;
+    align-items: center;
+
+}
+
+.messages .content .messagecard .a2 span{
+    font-size: 14px;
+    font-weight: 00;
+    letter-spacing: 0.04em;
+    color:rgb(0, 0, 0, 0.7)
+}
+
+
+.messages .content .messagecard .a2 h3{
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    color:rgb(0, 0, 0)
+
+}
+
+
+.messagecard h4{
+    font-size: 14px;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    color:rgb(0, 0, 0);
+    line-height: 20px;
+}
+
+
+.modal .inputs{
+    text-align: left;
+    padding:20px 40px; 
+}
+.modal .input_field h4{
+    color:#819347;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+}
+.modal .input_field{
+    padding:3px 0;
+}
+.modal .input_field input{
+    padding:5px 10px;
+    border:1px solid rgb(129, 147, 71, 0.3);
+    border-radius: 5px;
+    margin:5px 0;
+    color:#819347;
+    width:80%;
+
+}
+
+.modal .inputs button{
+    padding:10px;
+    background-color: #819347;
+    color:white;
+    letter-spacing: 0.03em;
+    font-family: Montserrat;
+    font-size: 16px;
+    border:none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width:88%;
+}
+
+}

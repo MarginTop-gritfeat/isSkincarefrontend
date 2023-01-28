@@ -4,6 +4,8 @@ import {BiPhoneCall} from 'react-icons/bi';
 import { IoMdPerson } from "react-icons/io";
 import {BsArrowRightCircle} from 'react-icons/bs'
 import './reportdoc.css'
+import Nav from "../nav/nav";
+import Footer from "../footer/footer";
 
 const ReportDoc=() =>{
    
@@ -11,23 +13,28 @@ const ReportDoc=() =>{
             {
                 name:'Bibek Chalise',
                 image:<IoMdPerson/>,
-                number:'+9845926945'
+                number:'+9845926945',
+                location:'Lamachar, Pokhara-16'
             },
             {
                 name:'Rajan Devkota',
                 image:<IoMdPerson/>,
-                number:'+9845926945'
+                number:'+9845926945',
+                location:"Sundhara, Kathmandu"
             },
             {
                 name:'Samir Lamsal',
                 image:<IoMdPerson/>,
-                number:'+9845926945'
+                number:'+9845926945',
+                location:'Pulchok, Kathmandu'
+
             }
             ,
             {
                 name:'Roshan KC',
                 image:<IoMdPerson/>,
-                number:'+9845926945'
+                number:'+9845926945',
+                location:'Gaindakot-2, Nawalpur'
             }
         
         ]
@@ -58,6 +65,7 @@ const ReportDoc=() =>{
                                     <h1>
                                         {doctors.name}
                                     </h1>
+                                    <p>{doctors.location}</p>
                                 </div>
                              
                                 <a href="tel:{doctors.number}">
@@ -70,6 +78,8 @@ const ReportDoc=() =>{
                         }
                     </div>
                 </div>
+                <Nav/>
+                <Footer/>
         </div>
     
 }
